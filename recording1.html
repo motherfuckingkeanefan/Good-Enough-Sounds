@@ -1,77 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorem Ipsum Dolor &mdash; Good Enough Sounds</title>
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lorem Ipsum Dolor — Good Enough Sounds</title>
+  <meta
+    name="description"
+    content="Detailed look at a field recording experiment by Good Enough Sounds."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 <body>
-  <header>
-    <h1>Good Enough Sounds</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="gear.html">Gear</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo-area">
+        <img src="Logo.jpg" alt="Good Enough Sounds logo" class="logo-img" />
+        <span class="site-title">Good Enough Sounds</span>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <article>
-      <header>
-        <h2>Lorem Ipsum Dolor</h2>
-      </header>
-      <section>
+
+  <!-- Main Content -->
+  <main class="site-main container">
+    <article class="recording-post">
+      <h2>Lorem Ipsum Dolor</h2>
+
+      <section class="recording-section">
         <h3>Location and Conditions</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          This spot was prime for capturing wave sounds—until 
+          a passing dog decided to bark every time I hit record. 
+          Gotta love real life.
+        </p>
         <figure class="recording-image">
-          <img src="https://astrotowing.ca/wp-content/uploads/2020/08/Horizontal-Placeholder-Image.jpg" alt="Lorem ipsum image">
-          <figcaption>Lorem ipsum dolor sit amet, consectetur.</figcaption>
+          <img
+            src="https://astrotowing.ca/wp-content/uploads/2020/08/Horizontal-Placeholder-Image.jpg"
+            alt="Recording location"
+          />
+          <figcaption>
+            Looks peaceful, right? The dog’s off-camera, 
+            plotting its next bark-attack.
+          </figcaption>
         </figure>
       </section>
-      <section>
+
+      <section class="recording-section">
         <h3>Recording Setup</h3>
-        <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
+        <p>
+          Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+          I used my usual gear, a dash of “let’s see what happens,” 
+          and a pinch of comedic timing.
+        </p>
         <figure class="recording-image">
-          <img src="https://astrotowing.ca/wp-content/uploads/2020/08/Horizontal-Placeholder-Image.jpg" alt="Lorem ipsum image">
-          <figcaption>Fusce nec tellus sed augue semper porta.</figcaption>
+          <img
+            src="https://astrotowing.ca/wp-content/uploads/2020/08/Horizontal-Placeholder-Image.jpg"
+            alt="Recording setup"
+          />
+          <figcaption>
+            Yes, that is a rock holding down my tripod. 
+            We improvise out here.
+          </figcaption>
         </figure>
       </section>
-      <section>
+
+      <section class="recording-details">
         <h3>Technical Details</h3>
         <ul>
           <li><strong>Coordinates:</strong> Lorem ipsum</li>
           <li><strong>Date:</strong> Lorem ipsum</li>
           <li><strong>Time:</strong> Lorem ipsum</li>
-          <li><strong>Weather:</strong> Lorem ipsum</li>
+          <li><strong>Weather:</strong> Sunny, with a 99% chance of dog cameo</li>
           <li><strong>Microphones:</strong> Lorem ipsum</li>
           <li><strong>Recorder:</strong> Lorem ipsum</li>
         </ul>
       </section>
-      <section>
+
+      <section class="recording-audio">
         <h3>Listen</h3>
         <audio controls>
-          <source src="katwijk_waves.mp3" type="audio/mpeg">
+          <source src="katwijk_waves.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <p style="text-align: center;">
-          <a href="katwijk_waves.mp3" download title="Download Recording" style="text-decoration: none; color: inherit;">📥</a> (MP3, 256 kbps, 64 MB)
-        </p>
+        <!-- Removed the download link for a cleaner, listen-only experience -->
       </section>
-      
-      <section>
+           
+
+      <section class="recording-observations">
         <h3>Observations</h3>
-        <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+        <p>
+          Turns out, waves plus random dog barks make a surprisingly 
+          interesting soundscape. It’s real, it’s unfiltered, and 
+          it’s definitely not perfect—just how we like it.
+        </p>
       </section>
     </article>
   </main>
-  <footer>
-    <p>&copy; 2025 Good Enough Sounds</p>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Good Enough Sounds</p>
+    </div>
   </footer>
 </body>
 </html>
