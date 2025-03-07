@@ -32,33 +32,68 @@ body {
   margin: 0 auto;
 }
 
-/* -------------------------
-   Header
-------------------------- */
+/* Header */
 .site-header {
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   padding: 10px 0;
 }
+
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .logo-area {
   display: flex;
   align-items: center;
 }
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .logo-img {
   height: 40px;
   width: auto;
   margin-right: 10px;
 }
+
 .site-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--heading-color);
 }
+
+/* Navigation */
+.site-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.site-nav ul li {
+  margin-left: 20px;
+}
+
+.site-nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+}
+
+.site-nav ul li a:hover {
+  color: #000; /* Slight emphasis on hover */
+}
+
+.site-nav ul li a.active {
+  border-bottom: 2px solid #000;
+}
+
 
 /* Navigation */
 .site-nav ul {
@@ -113,6 +148,23 @@ body {
   object-fit: cover; /* Ensures the image covers the area without distortion */
   border-radius: 8px; /* Optional: gives it rounded corners */
   margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin: 20px 0; /* Adds some space around the image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centers the image */
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 
