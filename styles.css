@@ -1,350 +1,77 @@
-/* -------------------------
-   CSS Variables & Base
-------------------------- */
-:root {
-  --text-color: #222;
-  --heading-color: #000;
-  --border-color: #ddd;
-  --bg-color: #fff;
-  --footer-bg: #f9f9f9;
-  --max-width: 1200px;
-}
-
-/* Global Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  color: var(--text-color);
-  background-color: #fafafa;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Utility Container */
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
 }
 
-/* Header */
-.site-header {
-  background-color: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
-  padding: 10px 0;
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.logo-area {
-  display: flex;
-  align-items: center;
+.highlight {
+    background-color: #ffd700;
+    padding: 0 5px;
+    font-weight: bold;
 }
 
-.logo-area a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+/* Updated link styles */
+a {
+    color: #007acc;
+    text-decoration: none;
+    border-bottom: 1px dashed #007acc;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.logo-img {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
+a:hover {
+    border-bottom-style: solid;
+    color: #005fa3;
 }
 
-.site-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--heading-color);
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #666;
 }
 
-/* Navigation */
-.site-nav ul {
-  display: flex;
-  list-style: none;
+.post-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1rem;
 }
 
-.site-nav ul li {
-  margin-left: 20px;
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.site-nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: color 0.2s ease;
-  padding-bottom: 2px;
+.image-gallery img {
+    width: calc(50% - 10px);
+    border-radius: 4px;
 }
 
-.site-nav ul li a:hover {
-  color: #000; /* Slight emphasis on hover */
-}
-
-.site-nav ul li a.active {
-  border-bottom: 2px solid #000;
-}
-
-
-/* Navigation */
-.site-nav ul {
-  display: flex;
-  list-style: none;
-}
-.site-nav ul li {
-  margin-left: 20px;
-}
-.site-nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: color 0.2s ease;
-  padding-bottom: 2px;
-}
-.site-nav ul li a:hover {
-  color: #000; /* Slight emphasis on hover */
-}
-.site-nav ul li a.active {
-  border-bottom: 2px solid #000;
-}
-
-/* -------------------------
-   Main Content
-------------------------- */
-.site-main {
-  padding: 40px 0;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.hero h1 {
-  font-size: 2rem;
-  color: var(--heading-color);
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--text-color);
-}
-
-.hero-img {
-  width: 100%; /* Makes it responsive */
-  max-width: 1200px; /* Sets the max width */
-  max-height: 400px; /* Limits the height */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 8px; /* Optional: gives it rounded corners */
-  margin-bottom: 20px;
-}
-
-.profile-img {
-  width: 150px; /* Adjust the size as needed */
-  height: 150px;
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  margin: 20px 0; /* Adds some space around the image */
-  display: block;
-  margin-left: auto;
-  margin-right: auto; /* Centers the image */
-}
-
-figcaption {
-  text-align: center;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-
-/* Intro / Features */
-.intro {
-  margin-bottom: 40px;
-}
-.intro h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--heading-color);
-}
-
-/* -----------------------------------------
-   Global UL (Lists) Styling in Main Content
------------------------------------------ */
-main ul {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-}
-
-main ul li {
-  position: relative;
-  padding-left: 26px; /* space for the logo bullet */
-  margin-bottom: 10px;
-}
-
-/* This pseudo-element uses the logo image instead of a bullet */
-main ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.2em; /* Adjust for vertical alignment */
-  width: 16px;
-  height: 16px;
-  background: url("logo-bullet.jpg") no-repeat center center;
-  background-size: contain;
-}
-
-/* Headings in Articles/Sections */
-.content h2,
-.posts h2,
-.recording-post h2,
-.contact-info h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--heading-color);
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 10px;
-}
-
-.content h3,
-.recording-section h3,
-.recording-details h3,
-.recording-audio h3,
-.recording-observations h3,
-.contact-item h3 {
-  font-size: 1.3rem;
-  margin: 20px 0 10px;
-  color: var(--heading-color);
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 6px;
-}
-
-/* -------------------------
-   Blog / Posts
-------------------------- */
-.posts .post-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-.post {
-  background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: 20px;
-  transition: box-shadow 0.2s ease;
-}
-
-.post h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--heading-color);
-}
-.post h3 a {
-  text-decoration: none;
-  color: var(--heading-color);
-}
-.more-posts {
-  margin-top: 20px;
-  color: var(--text-color);
-}
-
-/* -------------------------
-   Recording Page
-------------------------- */
-.recording-post h2 {
-  margin-bottom: 30px;
-}
-.recording-section {
-  margin-bottom: 30px;
-}
-.recording-image {
-  text-align: center;
-  margin: 20px 0;
-}
-.recording-image img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-.recording-image figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #777;
-}
-.recording-audio audio {
-  display: block;
-  margin: 20px auto;
-  max-width: 500px;
-}
-.download-link a {
-  text-decoration: none;
-  color: #000;
-}
-
-/* -------------------------
-   Contact Page
-------------------------- */
-.contact-info p {
-  margin-bottom: 20px;
-}
-.contact-methods {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
-}
-.contact-item {
-  flex: 1;
-  min-width: 250px;
-}
-.contact-item a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* -------------------------
-   Footer
-------------------------- */
-.site-footer {
-  background-color: var(--footer-bg);
-  border-top: 1px solid var(--border-color);
-  padding: 20px 0;
-  text-align: center;
-}
-.site-footer p {
-  color: var(--text-color);
-  font-size: 0.9rem;
-}
-
-/* -------------------------
-   Responsive
-------------------------- */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .site-nav ul {
-    margin-top: 10px;
-    flex-direction: column;
-  }
-  .site-nav ul li {
-    margin-left: 0;
-    margin-bottom: 8px;
-  }
-  .contact-methods {
-    flex-direction: column;
-  }
+/* Responsive: Make gallery images stack on smaller screens */
+@media (max-width: 600px) {
+    .image-gallery img {
+        width: 100%;
+    }
 }
