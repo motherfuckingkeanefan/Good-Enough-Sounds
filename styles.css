@@ -79,6 +79,18 @@
     color: var(--secondary-color);
   }
   
+  /* Filter Input */
+  #filter-container {
+    margin: 20px 0;
+  }
+  #post-filter {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.125em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
   /* Image Gallery */
   .image-gallery {
     display: flex;
