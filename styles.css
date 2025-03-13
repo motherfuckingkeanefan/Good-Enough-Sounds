@@ -94,11 +94,83 @@ footer {
 }
 
 .audio-sample audio {
-    width: 100%; /* Ensures the player spans the full container width */
+    width: 100%;
 }
 
 .audio-sample figcaption {
     font-size: 1em;
     margin-top: 0.5em;
     color: #555;
+}
+
+/* Dark Mode Toggle Button: fixed in top right corner */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 4px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #ddd;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #fff;
+}
+
+.dark-mode a:hover {
+    color: #aaa;
+}
+
+.dark-mode footer {
+    color: #ccc;
+}
+
+.dark-mode .post-date {
+    color: #aaa;
+}
+
+.dark-mode .audio-sample {
+    background-color: #333;
+}
+
+.dark-mode .audio-sample figcaption {
+    color: #ccc;
+}
+
+/* Custom audio styling in dark mode */
+/* Use filter with hue-rotate to adjust the default control colors */
+.dark-mode audio {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* WebKit-specific styling for audio controls */
+.dark-mode audio::-webkit-media-controls-panel {
+    background-color: #333 !important;
+}
+.dark-mode audio::-webkit-media-controls-play-button,
+.dark-mode audio::-webkit-media-controls-volume-slider,
+.dark-mode audio::-webkit-media-controls-current-time-display,
+.dark-mode audio::-webkit-media-controls-time-remaining-display {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Optionally adjust the toggle button in dark mode */
+.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #ccc;
 }
