@@ -140,7 +140,7 @@
     background: #0056b3;
   }
   
-  /* The waveform container—Wavesurfer.js will render its canvas here */
+  /* The waveform container—Wavesurfer.js renders its canvas here */
   .custom-audio-player .waveform {
     width: 100%;
     margin-bottom: 0.5em;
@@ -234,7 +234,7 @@
   }
   
   .dark-mode .custom-audio-player .waveform {
-    /* Wavesurfer.js renders its canvas inline, but you may adjust margins or borders here if desired */
+    /* Adjust margins or borders here if desired */
   }
   
   .dark-mode #dark-mode-toggle {
