@@ -1,257 +1,231 @@
 /* CSS Variables for a cohesive color palette */
 :root {
-    --primary-color: #000;
-    --background-color: #fff;
-    --accent-color: #007BFF;
-    --secondary-color: #666;
-    --light-gray: #f2f2f2;
-  }
-  
-  /* Global Styles */
-  body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.4;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    transition: background-color 0.5s, color 0.5s;
-  }
-  
-  .container {
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  /* Typography */
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  p {
-    font-size: 1.125em;
-    margin-bottom: 1em;
-  }
-  
-  .post-date {
-    font-size: 0.875em;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-  }
-  
-  .quote {
-    font-style: italic;
-    text-align: center;
-    margin: 2em 0;
-  }
-  
-  /* Links */
-  a {
-    color: var(--primary-color);
-    text-decoration: underline;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: var(--accent-color);
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    margin-top: 2em;
-    font-size: 0.875em;
-    color: var(--secondary-color);
-  }
-  
-  /* Filter Input */
-  #filter-container {
-    margin: 20px 0;
-  }
-  #post-filter {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.125em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Image Gallery */
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 1.5em 0;
-  }
-  
+  --primary-color: #000;
+  --background-color: #fff;
+  --accent-color: #007BFF;
+  --secondary-color: #666;
+  --light-gray: #f2f2f2;
+}
+
+/* Global Styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.125em;
+  margin-bottom: 1em;
+}
+
+.post-date {
+  font-size: 0.875em;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.875em;
+  color: var(--secondary-color);
+}
+
+/* Filter Input */
+#filter-container {
+  margin: 20px 0;
+}
+#post-filter {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.125em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.5em 0;
+}
+
+.image-gallery img {
+  width: calc(50% - 10px);
+  display: block;
+}
+
+@media (max-width: 600px) {
   .image-gallery img {
-    width: calc(50% - 10px);
-    display: block;
-  }
-  
-  @media (max-width: 600px) {
-    .image-gallery img {
-      width: 100%;
-    }
-  }
-  
-  /* Custom Audio Player with Waveform */
-  .custom-audio-player {
-    background-color: var(--light-gray);
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  
-  .custom-audio-player button.play-pause {
-    background: var(--accent-color);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-    margin-bottom: 1em;
-    transition: background 0.3s;
-  }
-  
-  .custom-audio-player button.play-pause:hover {
-    background: #0056b3;
-  }
-  
-  /* The waveform container—Wavesurfer.js renders its canvas here */
-  .custom-audio-player .waveform {
     width: 100%;
-    margin-bottom: 0.5em;
   }
-  
-  /* Time Display */
-  .custom-audio-player .time {
-    font-size: 0.9em;
-    color: var(--secondary-color);
+}
+
+/* Integrated Custom Audio Player */
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom-audio-player button.play-pause {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.custom-audio-player button.play-pause:hover {
+  color: var(--accent-color);
+}
+
+.custom-audio-player .waveform {
+  flex-grow: 1;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.custom-audio-player .time {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  white-space: nowrap;
+}
+
+/* Diary Post */
+.diary-post {
+  margin-bottom: 2em;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+  transition: box-shadow 0.3s ease;
+}
+
+.diary-post:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #ddd;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode a:hover {
+  color: #aaa;
+}
+
+.dark-mode footer {
+  color: #ccc;
+}
+
+.dark-mode .post-date {
+  color: #aaa;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Diary Post */
-  .diary-post {
-    margin-bottom: 2em;
-    padding: 1em;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 0.6s ease-out;
-    transition: box-shadow 0.3s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .diary-post:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Back-to-Top Button */
-  #back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    background-color: var(--accent-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Dark Mode Toggle Button */
-  #dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    z-index: 1000;
-    background-color: var(--light-gray);
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #dark-mode-toggle:hover {
-    background-color: #ddd;
-  }
-  
-  /* Dark Mode Styles */
-  .dark-mode {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .dark-mode a {
-    color: #fff;
-  }
-  
-  .dark-mode a:hover {
-    color: #aaa;
-  }
-  
-  .dark-mode footer {
-    color: #ccc;
-  }
-  
-  .dark-mode .post-date {
-    color: #aaa;
-  }
-  
-  .dark-mode .custom-audio-player {
-    background-color: #333;
-  }
-  
-  .dark-mode .custom-audio-player .time,
-  .dark-mode .custom-audio-player button.play-pause {
-    color: #fff;
-  }
-  
-  .dark-mode .custom-audio-player .waveform {
-    /* Adjust margins or borders here if desired */
-  }
-  
-  .dark-mode #dark-mode-toggle {
-    background-color: #444;
-    color: #fff;
-    border: 1px solid #ccc;
-  }
-  
-  /* Fade-in Animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}
