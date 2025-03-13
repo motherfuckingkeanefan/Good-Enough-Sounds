@@ -132,22 +132,7 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Back-to-Top Button */
-#back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 15px;
-  font-size: 1.2em;
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: none;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-}
+
 
 /* Fade-in Animation */
 @keyframes fadeInUp {
