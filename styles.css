@@ -9,6 +9,15 @@ body {
     color: #000;
 }
 
+.container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.diary-post {
+    margin-bottom: 2em;
+}
+
 h1 {
     font-size: 3em;
     text-align: center;
@@ -73,4 +82,23 @@ footer {
     .image-gallery img {
         width: 100%;
     }
+}
+
+/* Styles for audio sample presentation */
+.audio-sample {
+    margin: 2em 0;
+    text-align: center;
+    padding: 1em;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+.audio-sample audio {
+    width: 100%; /* Ensures the player spans the full container width */
+}
+
+.audio-sample figcaption {
+    font-size: 1em;
+    margin-top: 0.5em;
+    color: #555;
 }
