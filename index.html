@@ -18,6 +18,13 @@
       Welcome to my diary where I share my adventures in field recording, my battles with perfectionism, and the raw, beautiful moments I capture along the way.
     </p>
     
+    <!-- Filter Section -->
+    <div id="filter-container">
+      <input type="text" id="post-filter" placeholder="Search posts by keyword, topic, or any word..." />
+    </div>
+    
+    
+    <!-- Posts -->
     <article id="beach-session" class="diary-post">
       <h2>Field Recording at Strand Wassenaarseslag: Capturing Waves and Foam</h2>
       <p class="post-date">Posted on March 12, 2025</p>
@@ -115,6 +122,20 @@
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       toggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+    });
+    
+    // Post Filter functionality
+    const postFilter = document.getElementById('post-filter');
+    postFilter.addEventListener('input', () => {
+      const filterText = postFilter.value.toLowerCase();
+      const posts = document.querySelectorAll('.diary-post');
+      posts.forEach(post => {
+        if (post.textContent.toLowerCase().includes(filterText)) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
     });
     
     // Back-to-top button functionality
