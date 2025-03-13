@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Good Enough Sounds – A Field Recording Diary</title>
+  <!-- Refined Typography using Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +17,7 @@
     <p>
       Welcome to my diary where I share my adventures in field recording, my battles with perfectionism, and the raw, beautiful moments I capture along the way.
     </p>
+    
     <article id="beach-session" class="diary-post">
       <h2>Field Recording at Strand Wassenaarseslag: Capturing Waves and Foam</h2>
       <p class="post-date">Posted on March 12, 2025</p>
@@ -63,7 +66,7 @@
         Today I headed to Landje van Bremmer for my very first field recording session, and I loved every moment of it. Reaching the spot required hopping a fence—yes, I even had to dodge a potential run-in with an upset farmer. The field was a bit muddy, and a few curious sheep were around, making the experience both practical and unexpectedly interesting.
       </p>
       <p>
-        A quick note from the session: it might be a good idea not to wear jeans while recording, as the wet, slightly soggy conditions in the field can be uncomfortable. I was a bit worried about the wind as well, but in hindsight, a High Pass filter did a solid job of removing the low wind noise.
+        A quick note from the session: it might be a good idea not to wear jeans while recording, as the wet, slightly soggy conditions in the field can be uncomfortable. I was a bit worried about the wind as well, but in post production, the High Pass filter worked perfectly in eliminating the low wind noise.
       </p>
       <p>
         The weather was favorable with a gentle sun and a mild breeze, although I kept an eye on my rig to avoid unwanted wind noise. I set up my usual gear: a Zoom F3 recorder paired with Line Audio CM4 mics in an ORTF configuration, all mounted on my Manfrotto 5001B Nano Stand, and for this session, I used the WS8 Rode windscreens.
@@ -97,19 +100,35 @@
       </p>
     </article>
     
-    
-    
     <footer>
       Created with passion for field recording | &copy; 2025 Pieter Houtekamer
     </footer>
   </div>
+  
+  <!-- Back-to-Top Button -->
+  <button id="back-to-top" title="Back to Top">↑</button>
 
-  <!-- Toggle Script -->
+  <!-- Scripts -->
   <script>
+    // Dark mode toggle
     const toggle = document.getElementById('dark-mode-toggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       toggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+    });
+    
+    // Back-to-top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
