@@ -1,110 +1,149 @@
-body {
+/* CSS Variables for a cohesive color palette */
+:root {
+    --primary-color: #000;
+    --background-color: #fff;
+    --accent-color: #007BFF;
+    --secondary-color: #666;
+    --light-gray: #f2f2f2;
+  }
+  
+  /* Global Styles */
+  body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 1.4;
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    color: #000;
-}
-
-.container {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .container {
     width: 100%;
     padding: 0 20px;
-}
-
-.diary-post {
-    margin-bottom: 2em;
-}
-
-h1 {
+  }
+  
+  /* Typography */
+  h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     text-align: center;
     margin-bottom: 0.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-h2 {
+  }
+  
+  h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     margin-bottom: 0.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-p {
+  }
+  
+  p {
     font-size: 1.125em;
     margin-bottom: 1em;
-}
-
-.quote {
+  }
+  
+  .post-date {
+    font-size: 0.875em;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .quote {
     font-style: italic;
     text-align: center;
     margin: 2em 0;
-}
-
-a {
-    color: #000;
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
     text-decoration: underline;
-}
-
-a:hover {
-    color: #555;
-}
-
-footer {
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
     margin-top: 2em;
     font-size: 0.875em;
-    color: #333;
-}
-
-.post-date {
-    font-size: 0.875em;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.image-gallery {
+    color: var(--secondary-color);
+  }
+  
+  /* Image Gallery */
+  .image-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin: 1.5em 0;
-}
-
-.image-gallery img {
+  }
+  
+  .image-gallery img {
     width: calc(50% - 10px);
     display: block;
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .image-gallery img {
-        width: 100%;
+      width: 100%;
     }
-}
-
-/* Styles for audio sample presentation */
-.audio-sample {
+  }
+  
+  /* Audio Sample Presentation */
+  .audio-sample {
     margin: 2em 0;
     text-align: center;
     padding: 1em;
-    background-color: #f2f2f2;
+    background-color: var(--light-gray);
     border-radius: 4px;
-}
-
-.audio-sample audio {
+  }
+  
+  .audio-sample audio {
     width: 100%;
-}
-
-.audio-sample figcaption {
+  }
+  
+  .audio-sample figcaption {
     font-size: 1em;
     margin-top: 0.5em;
-    color: #555;
-}
-
-/* Dark Mode Toggle Button: fixed in top right corner */
-#dark-mode-toggle {
+    color: var(--secondary-color);
+  }
+  
+  /* Fade-in Animation for Diary Posts */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .diary-post {
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease-out;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .diary-post:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dark Mode Toggle Button */
+  #dark-mode-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -112,65 +151,83 @@ footer {
     font-size: 1em;
     cursor: pointer;
     z-index: 1000;
-    background-color: #f2f2f2;
+    background-color: var(--light-gray);
     border: none;
     border-radius: 4px;
-}
-
-#dark-mode-toggle:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  #dark-mode-toggle:hover {
     background-color: #ddd;
-}
-
-/* Dark Mode Styles */
-.dark-mode {
+  }
+  
+  /* Back-to-Top Button */
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
     background-color: #000;
     color: #fff;
-}
-
-.dark-mode a {
+  }
+  
+  .dark-mode a {
     color: #fff;
-}
-
-.dark-mode a:hover {
+  }
+  
+  .dark-mode a:hover {
     color: #aaa;
-}
-
-.dark-mode footer {
+  }
+  
+  .dark-mode footer {
     color: #ccc;
-}
-
-.dark-mode .post-date {
+  }
+  
+  .dark-mode .post-date {
     color: #aaa;
-}
-
-.dark-mode .audio-sample {
+  }
+  
+  .dark-mode .audio-sample {
     background-color: #333;
-}
-
-.dark-mode .audio-sample figcaption {
+  }
+  
+  .dark-mode .audio-sample figcaption {
     color: #ccc;
-}
-
-/* Custom audio styling in dark mode */
-/* Use filter with hue-rotate to adjust the default control colors */
-.dark-mode audio {
+  }
+  
+  /* Custom audio styling in dark mode */
+  .dark-mode audio {
     filter: invert(1) hue-rotate(180deg);
-}
-
-/* WebKit-specific styling for audio controls */
-.dark-mode audio::-webkit-media-controls-panel {
+  }
+  
+  .dark-mode audio::-webkit-media-controls-panel {
     background-color: #333 !important;
-}
-.dark-mode audio::-webkit-media-controls-play-button,
-.dark-mode audio::-webkit-media-controls-volume-slider,
-.dark-mode audio::-webkit-media-controls-current-time-display,
-.dark-mode audio::-webkit-media-controls-time-remaining-display {
+  }
+  
+  .dark-mode audio::-webkit-media-controls-play-button,
+  .dark-mode audio::-webkit-media-controls-volume-slider,
+  .dark-mode audio::-webkit-media-controls-current-time-display,
+  .dark-mode audio::-webkit-media-controls-time-remaining-display {
     filter: invert(1) hue-rotate(180deg);
-}
-
-/* Optionally adjust the toggle button in dark mode */
-.dark-mode #dark-mode-toggle {
+  }
+  
+  /* Adjust dark mode toggle button */
+  .dark-mode #dark-mode-toggle {
     background-color: #444;
     color: #fff;
     border: 1px solid #ccc;
-}
+  }
+  
