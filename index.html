@@ -7,9 +7,11 @@
   <!-- Refined Typography using Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Wavesurfer.js Library -->
+  <script src="https://unpkg.com/wavesurfer.js"></script>
 </head>
 <body>
-  <!-- Dark Mode Toggle Button placed at top right -->
+  <!-- Dark Mode Toggle Button -->
   <button id="dark-mode-toggle">Dark Mode</button>
   
   <div class="container">
@@ -23,8 +25,7 @@
       <input type="text" id="post-filter" placeholder="Search posts by keyword, topic, or any word..." />
     </div>
     
-    
-    <!-- Posts -->
+    <!-- Article 1 -->
     <article id="beach-session" class="diary-post">
       <h2>Field Recording at Strand Wassenaarseslag: Capturing Waves and Foam</h2>
       <p class="post-date">Posted on March 12, 2025</p>
@@ -38,34 +39,26 @@
         I had some ideas to improve the setup: perhaps adding a hook to properly attach my headphones to the tripod when not in use. This could help prevent the headphones from moving in the wind and causing extra noise. I even considered a setup where you could listen to the sound from about 5-10 meters away—though I’m still figuring out the details.
       </p>
       <div class="image-gallery">
-        <img src="images//2025-03-12/2025-03-12 11-41-27.jpeg" alt="Waves crashing at Strand Wassenaarseslag">
+        <img src="images/2025-03-12/2025-03-12 11-41-27.jpeg" alt="Waves crashing at Strand Wassenaarseslag">
         <img src="images/2025-03-12/2025-03-12 12-07-51.jpeg" alt="Close-up of the foam on the shore">
       </div>
       <p>
         The sound of the waves was constant and compelling—the deep, rolling rhythm of the ocean paired with the delicate hiss of foam breaking on the sand. Even as a light rain began, the sea maintained its steady song. I adjusted my setup slightly to keep the focus on these natural elements and to remind myself that genuine beauty is found in simplicity.
       </p>
-      <div class="image-gallery">
-        <img src="images/2025-03-12/2025-03-12 12-12-58 (2).jpeg" alt="Detailed view of waves and foam">
-        <img src="images/2025-03-12/2025-03-12 12-13-41 (2).jpeg" alt="Close-up of a seashell amidst the foam">
+      <!-- Custom Audio Player with Waveform for Beach Session -->
+      <div class="custom-audio-player" data-src="audio/2025-03-12/12032025.mp3">
+        <button class="play-pause play"><span>&#9658;</span></button>
+        <div class="waveform"></div>
+        <div class="time">
+          <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+        </div>
       </div>
-      <p class="quote">
-        "In the steady rush of waves and the gentle caress of foam, nature speaks in its most authentic voice."
-      </p>
-      <!-- Enhanced Audio Presentation for Strand Wassenaarseslag -->
-      <figure class="audio-sample">
-        <audio controls>
-          <source src="audio/2025-03-12/12032025.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <figcaption>
-          Enjoy a clip capturing the rhythmic crashing of waves and the subtle sounds of ocean foam.
-        </figcaption>
-      </figure>
       <p>
         After about 45 minutes of recording, I sat on the damp sand, absorbing the pure sound of the sea. This session reminded me that letting go of perfection is essential; sometimes the simplest elements—the rolling waves and shifting foam—offer the most genuine, unedited moments. It was a peaceful day that reinforced my goal of capturing real sound, raw and unpolished.
       </p>
     </article>
     
+    <!-- Article 2 -->
     <article id="landje-bremmer" class="diary-post">
       <h2>Field Recording at Landje van Bremmer: Practical Challenges & Clear Insights</h2>
       <p class="post-date">Posted on March 6, 2025</p>
@@ -85,23 +78,14 @@
       <p>
         The soundscape featured clear honks from geese, a steady rustle of reeds, and ambient natural sounds that provided a balanced background. I made a few light edits to trim minor issues, but I purposefully embraced every unexpected, imperfect moment—a reminder that striving for perfection only obscures the beauty of real sound.
       </p>
-      <div class="image-gallery">
-        <img src="images/2025-03-06/2025-03-06 15-53-41.jpeg" alt="Field recording setup: tripod, recorder, and microphones">
-        <img src="images/2025-03-06/2025-03-06 15-53-54.jpeg" alt="Geese voicing their opinions">
+      <!-- Custom Audio Player with Waveform for Landje van Bremmer -->
+      <div class="custom-audio-player" data-src="audio/2025-03-06/06032025.mp3">
+        <button class="play-pause play"><span>&#9658;</span></button>
+        <div class="waveform"></div>
+        <div class="time">
+          <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+        </div>
       </div>
-      <p class="quote">
-        "Every unexpected sound is a reminder of the raw, unpredictable nature of field recording."
-      </p>
-      <!-- Enhanced Audio Presentation for Landje van Bremmer -->
-      <figure class="audio-sample">
-        <audio controls>
-          <source src="audio/2025-03-06/06032025.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <figcaption>
-          Listen to a sample capturing the natural ambiance and dynamic range of the session at Landje van Bremmer.
-        </figcaption>
-      </figure>
       <p>
         Overall, this session served as a practical exercise in managing unpredictable outdoor conditions while battling my own urge for perfection. It reinforced that field recording is about capturing real moments—even if they aren’t flawless.
       </p>
@@ -141,16 +125,61 @@
     // Back-to-top button functionality
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
+      backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
     });
     
     backToTopButton.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    
+    // Initialize Custom Audio Players with Waveform Visualization using Wavesurfer.js
+    document.querySelectorAll('.custom-audio-player').forEach(player => {
+      const src = player.getAttribute('data-src');
+      const playPauseBtn = player.querySelector('.play-pause');
+      const currentTimeEl = player.querySelector('.current-time');
+      const durationEl = player.querySelector('.duration');
+      const waveformContainer = player.querySelector('.waveform');
+      
+      // Create Wavesurfer instance
+      const waveSurfer = WaveSurfer.create({
+        container: waveformContainer,
+        waveColor: '#007BFF',
+        progressColor: '#0056b3',
+        height: 60,
+        responsive: true,
+        barWidth: 2,
+      });
+      
+      waveSurfer.load(src);
+      
+      // When ready, set duration
+      waveSurfer.on('ready', () => {
+        durationEl.textContent = formatTime(waveSurfer.getDuration());
+      });
+      
+      // Update current time during playback
+      waveSurfer.on('audioprocess', () => {
+        currentTimeEl.textContent = formatTime(waveSurfer.getCurrentTime());
+      });
+      
+      // Also update time when seeking
+      waveSurfer.on('seek', () => {
+        currentTimeEl.textContent = formatTime(waveSurfer.getCurrentTime());
+      });
+      
+      // Toggle play/pause on button click
+      playPauseBtn.addEventListener('click', () => {
+        waveSurfer.playPause();
+        playPauseBtn.innerHTML = waveSurfer.isPlaying() ? '<span>&#10074;&#10074;</span>' : '<span>&#9658;</span>';
+      });
+    });
+    
+    // Helper function to format time (mm:ss)
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60);
+      return minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
+    }
   </script>
 </body>
 </html>
