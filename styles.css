@@ -1,41 +1,25 @@
-/* CSS Variables for a Cohesive Color Palette */
-:root {
-  --primary-color: #000;
-  --background-color: #fff;
-  --accent-color: #007BFF;
-  --secondary-color: #666;
-  --light-gray: #f2f2f2;
-}
-
-/* Global Styles & Box Sizing */
+/* CSS Reset & Box Sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Base Body Styles */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  transition: background-color 0.5s, color 0.5s;
-}
-
-/* Containers */
-.main-container,
-.search-bar-container,
-.container {
+  background: #fff;
+  color: #000;
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Typography */
+/* Headings */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
@@ -53,6 +37,7 @@ h2 {
   letter-spacing: 1px;
 }
 
+/* Paragraphs & Post Date */
 p {
   font-size: 1.125em;
   margin-bottom: 1em;
@@ -60,46 +45,40 @@ p {
 
 .post-date {
   font-size: 0.875em;
-  color: var(--secondary-color);
+  color: #666;
   margin-bottom: 1rem;
 }
 
-.quote {
-  font-style: italic;
-  text-align: center;
-  margin: 2em 0;
-}
-
-/* Links */
+/* Links (minimal styling) */
 a {
-  color: var(--primary-color);
+  color: #000;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: #007BFF;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 2em;
-  font-size: 0.875em;
-  color: var(--secondary-color);
-}
-
-/* Filter Input (Search Bar) */
-#filter-container {
-  margin: 20px 0;
-}
-
-#post-filter {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.125em;
+/* Diary Post Container */
+.diary-post {
+  margin-bottom: 2em;
+  padding: 1em;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Image Gallery */
@@ -121,36 +100,30 @@ footer {
   }
 }
 
-/* Embedded SoundCloud Player */
+/* SoundCloud Player */
 .soundcloud-player {
   margin: 20px 0;
   padding: 10px;
-  border: 0px solid #ccc;
-  background-color: var(--background-color);
+  background: #fff;
 }
 
-/* Diary Post */
-.diary-post {
-  margin-bottom: 2em;
-  padding: 1em;
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.875em;
+  color: #666;
+}
+
+/* Filter Input (Search Bar) */
+#filter-container {
+  margin: 20px 0;
+}
+
+#post-filter {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.125em;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.6s ease-out;
-  transition: box-shadow 0.3s ease;
-}
-
-.diary-post:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Fade-in Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
