@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Good Enough Sounds – A Field Recording Diary</title>
   <!-- Refined Typography using Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Good Enough Sounds</h1>
-    <p>
-      Welcome to my diary where I share my early adventures in field recording. I’m still learning and only have a few sessions under my belt, but I’m passionate about capturing nature’s sounds—even if they aren’t perfect.
-    </p>
+  <div id="container">
+    <!-- Header -->
+    <header id="header">
+      <h1>Good Enough Sounds</h1>
+      <p class="tagline">A Field Recording Diary</p>
+    </header>
     
     <!-- Filter Section -->
     <div id="filter-container">
       <input type="text" id="post-filter" placeholder="Search posts by keyword, topic, or any word..." />
     </div>
     
-    <!-- Diary Posts Section -->
-    <section id="posts">
-
+    <!-- Main Content -->
+    <main id="pageContent">
       <!-- Article: Valkenburgse Meer -->
       <article id="valkenburgse-meer" class="diary-post">
         <h2>Field Recording at Valkenburgse Meer: Dawn Encounters and Early Bird Serenades</h2>
         <p class="post-date">Posted on March 21, 2025</p>
-        
         <p>
           This morning before sunrise, I ventured out to <a href="https://www.google.com/maps?q=52%C2%B009'33.2%22N%204%C2%B026'01.5%22E" target="_blank">Valkenburgse Meer</a>, drawn by the promise of a quiet pre-dawn symphony. With my gear in hand, I explored several spots where lively bird activity unfolded in unexpected ways.
         </p>
-        
         <p>
           I managed to capture the calls of several species – I’m sure I got at least an <a href="https://ebird.org/species/eurmag1" target="_blank">Ekster</a>, a <a href="https://ebird.org/species/gragoo?" target="_blank">Grauwe Gans</a>, a <a href="https://ebird.org/species/eurgol?" target="_blank">Putter</a>, a <a href="https://ebird.org/species/euroys1?" target="_blank">Scholekster</a>, a <a href="https://ebird.org/species/winwre4?" target="_blank">Winterkoning</a>, and a <a href="https://ebird.org/species/comchi1?" target="_blank">Tjiftjaf</a>. Each call contributed its own unique note to the emerging chorus.
         </p>
-        
         <p>
           For the first time, I used Chirpity to help identify the bird calls. Watching the app analyze my recordings felt a bit like collecting Pokémon – you never know what you’ll get, and it’s a lot of fun. However, I must admit that I felt a bit anxious about analyzing, editing, and cutting out all the different parts of each species, as I haven’t yet developed a solid workflow. Adding data to <a href="https://ebird.org/" target="_blank">eBird</a> or <a href="https://xeno-canto.org/" target="_blank">Xeno-Canto</a> is still a new challenge for me.
         </p>
-        
         <p>
           Despite these uncertainties, I truly enjoyed being outdoors among the birds before sunrise. I even snapped some lovely pictures along the way. Shoutout to anyone reading this – I’m on the lookout for a bird friend who can teach me the craft!
         </p>
-        
         <p>
           I’m looking forward to my next recording session as I continue to focus on birds. And yes, I recently picked up the <a href="https://www.amazon.nl/Collins-Bird-Guide-Complete-Britain/dp/0007268149" target="_blank">Collins Bird Guide</a>, which is a really nice addition to my toolkit.
         </p>
@@ -68,14 +63,12 @@
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/good-enough-sounds/field-recording-at-valkenburgse-meer-dawn-encounters-and-early-bird-serenades&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
           </iframe>
         </div>
-        
       </article>
-
-      <!-- Article 1: South Dunes in Katwijk aan Zee (Latest) -->
+      
+      <!-- Article 1: South Dunes in Katwijk aan Zee -->
       <article id="south-dunes-katwijk" class="diary-post">
         <h2>Field Recording at South Dunes in Katwijk aan Zee: The Aalscholver Encounter</h2>
         <p class="post-date">Posted on March 16, 2025</p>
-        
         <p>
           Today, I eagerly ventured out to the <a href="https://maps.app.goo.gl/77pdgmLyqnvc1LP87" target="_blank">South Dunes</a> in Katwijk aan Zee, driven by my deep love for nature’s subtle symphony. If I ever had to choose between a lively party and the gentle magic of the natural world, my heart always leans toward nature.
         </p>
@@ -89,7 +82,7 @@
           I left the dunes with a head brimming with questions and a heart bursting with joy. The playful wind and even a few unexpected gusts that challenged my setup made the experience all the more unforgettable. It’s moments like these that inspire me to keep exploring and recording.
         </p>
         
-        <!-- Six Images in Three Galleries -->
+        <!-- Image Galleries -->
         <div class="image-gallery">
           <img src="images/2025-03-16/JPEG/1.jpg" alt="Entrance to the South Dunes">
           <img src="images/2025-03-16/JPEG/2.jpg" alt="A panoramic view of the dunes">
@@ -109,15 +102,12 @@
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/good-enough-sounds/field-recording-at-south-dunes-in-katwijk-aan-zee-the-cormorant-encounter&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
           </iframe>
         </div>
-        
-        
       </article>
       
       <!-- Article 2: Katwijkse Uitwatering -->
       <article id="katwijkse-uitwatering" class="diary-post">
         <h2>Field Recording at Katwijkse Uitwatering: Where Sweet Water Meets Salt and Wind</h2>
         <p class="post-date">Posted on March 14, 2025</p>
-        
         <p>
           Today, I set out to capture the unique soundscape of <a href="https://maps.app.goo.gl/hqJZ5keXCiXVpnm56" target="_blank">Katwijkse Uitwatering</a>, where the fresh flow of the Old Rhine meets the salty sea. With a warm curiosity and a humble desire to learn, I used my Zoom F3 and Line Audio CM4 microphones in an ORTF configuration to record every subtle whisper of nature.
         </p>
@@ -128,7 +118,7 @@
           Unsure whether to capture the loud crash of waves or the soft, continuous murmur of water meeting sand, I experimented with my setup and learned to appreciate every nuance. My Movo windscreens did their best, and the experience filled me with both excitement and valuable lessons.
         </p>
         
-        <!-- Six Images in Three Galleries -->
+        <!-- Image Galleries -->
         <div class="image-gallery">
           <img src="images/2025-03-14/JPEG/1.jpg" alt="Tripod near the water at Katwijkse Uitwatering">
           <img src="images/2025-03-14/JPEG/2.jpg" alt="Close-up of mics pointed toward the water">
@@ -148,15 +138,12 @@
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/good-enough-sounds/field-recording-at-katwijkse-uitwatering-where-sweet-water-meets-salt-and-wind&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
           </iframe>
         </div>
-        
-   
       </article>
       
       <!-- Article 3: Strand Wassenaarseslag -->
       <article id="beach-session" class="diary-post">
         <h2>Field Recording at Strand Wassenaarseslag: Capturing Waves and Foam</h2>
         <p class="post-date">Posted on March 12, 2025</p>
-        
         <p>
           Today, I set off to <a href="https://maps.app.goo.gl/GEGpTD2c87azr5FM6" target="_blank">Strand Wassenaarseslag</a> with a heart brimming with curiosity and a spirit eager for discovery. As I approached the shore, the ocean greeted me with its rhythmic crash of waves and the soft, mesmerizing hiss of foam – a gentle invitation into its secret world.
         </p>
@@ -167,7 +154,7 @@
           I experimented with my new Movo windscreens, which performed beautifully. Worried that my tripod might tip over in the gusty wind, I ingeniously used some driftwood on its legs to stabilize my equipment. Later, I was delighted to discover that the recording even served as soothing white noise for my baby, who now drifts off to sleep every night with it.
         </p>
         
-        <!-- Six Images in Three Galleries -->
+        <!-- Image Galleries -->
         <div class="image-gallery">
           <img src="images/2025-03-12/JPEG/1.jpg" alt="Waves crashing at Strand Wassenaarseslag">
           <img src="images/2025-03-12/JPEG/2.jpg" alt="Close-up of the foam on the shore">
@@ -181,20 +168,18 @@
           <img src="images/2025-03-12/JPEG/6.jpg" alt="A solitary seashell on wet sand">
         </div>
         
-        <!-- SoundCloud Player with new track -->
+        <!-- SoundCloud Player -->
         <div class="soundcloud-player">
           <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/good-enough-sounds/7287c997-badb-4931-8a9d-37a596dc7a5a&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
           </iframe>
         </div>
-      
       </article>
       
       <!-- Article 4: Landje van Bremmer -->
       <article id="landje-bremmer" class="diary-post">
         <h2>Field Recording at Landje van Bremmer: Practical Challenges & Clear Insights</h2>
         <p class="post-date">Posted on March 6, 2025</p>
-        
         <p>
           My very first field recording session at <a href="https://maps.app.goo.gl/nNhYTP87ARNnBKeT7" target="_blank">Landje van Bremmer</a> was an adventure full of unexpected challenges. I even had to hop a fence (and avoid a possible run-in with an upset farmer) just to reach the spot. It was nerve-wracking yet incredibly exciting.
         </p>
@@ -231,17 +216,15 @@
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2053812604&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
           </iframe>
         </div>
-        
       </article>
-      
-    </section>
+    </main>
     
-    <footer>
-      Created with passion for field recording | &copy; 2025 Pieter Houtekamer
+    <!-- Footer -->
+    <footer id="footer">
+      <small>&copy; 2025 Pieter Houtekamer. Created with passion for field recording.</small>
     </footer>
   </div>
 
-  <!-- Scripts -->
   <script>
     // Post Filter functionality
     const postFilter = document.getElementById('post-filter');
